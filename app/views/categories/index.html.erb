@@ -1,8 +1,14 @@
 <div class = "top">
   <h1>To do list</h1>
+  <h2>"With great power, comes great responsibility!"
   <div class = "new_category">
       <%= link_to "Add to do list", new_category_path %>
   </div>
+  <% if logged_in? %>
+    <h2><%=current_user.username%></h2>
+  <% end %>
+  <div class = "new_category">
+    <%= link_to "Log Out", login_path %></div>
 </div>
 
 <div class="container">
@@ -10,16 +16,20 @@
   <table>
     <thead>
       <tr>
-        <th>ID</th>
         <th>Title</th>
         <th>Description</th>
+        <th> Update Category</th>
+        <th> Delete Category </th>
+        <th> Show Category </th>
+        <th> Show Tasks </th>
+        <th> Add Task </th>
       </tr>
     </thead>
     <tbody>
     <div>
       <% @categories.each do |category| %>
       <tr class = "label_box">
-        <td class = "id_container"><%= category.id %></td>
+        
         <td class = "name_container"><%= category.name %></td>
         <td class = "body_container"><%= category.description %></td>
         <div class = "buttons">

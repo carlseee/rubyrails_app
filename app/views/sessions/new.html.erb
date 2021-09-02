@@ -1,0 +1,22 @@
+<h1 class="sign"> Log In </h1>
+
+<%= form_with(scope: :session, url: login_path) do |f| %>
+
+  <div class="form-group">
+    <%= f.label :username %><br/>
+    <%= f.text_field :username, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %><br/>
+    <%= f.password_field :password, class:"form-control" %>
+  </div>
+
+  <div class = "form-group">
+    <%= f.submit "Log In", class: "btn btn-primary" %>
+  </div>
+
+  <div class = "Sign-up">
+    <td><%= link_to "Don't have an account yet? Sign up now!", signup_path %></td>
+  </div>
+<% end %>
