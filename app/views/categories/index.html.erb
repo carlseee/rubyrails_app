@@ -1,14 +1,14 @@
-<div class = "top">
-  <h1>To do list</h1>
-  <h2>"With great power, comes great responsibility!"
-  <div class = "new_category">
-      <%= link_to "Add to do list", new_category_path %>
-  </div>
+<div class = "high">
   <% if logged_in? %>
     <h2><%=current_user.username%></h2>
   <% end %>
+  <%= link_to "Log Out", login_path %></div>
+  <div class = "top">
+    <h1>TO DO LIST</h1>
+    <h2>"With great power, comes great responsibility!"</h2>
   <div class = "new_category">
-    <%= link_to "Log Out", login_path %></div>
+      <%= link_to "ADD TO DO LIST", new_category_path %>
+  </div>
 </div>
 
 <div class="container">
@@ -16,22 +16,27 @@
   <table>
     <thead>
       <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th> Update Category</th>
-        <th> Delete Category </th>
-        <th> Show Category </th>
-        <th> Show Tasks </th>
-        <th> Add Task </th>
+        <th>TITLE</th>
+        <th>DESCRIPTION</th>
+        <th>USER ID</th>
+        <th> UPDATE CATEGORY </th>
+        <th> DELETE CATEGORY </th>
+        <th> SHOW CATEGORY </th>
+        <th> SHOW TASKS </th>
+        <th> ADD TASKS </th>
+        
       </tr>
     </thead>
     <tbody>
     <div>
       <% @categories.each do |category| %>
+      <% if category.user == current_user %>
       <tr class = "label_box">
         
         <td class = "name_container"><%= category.name %></td>
         <td class = "body_container"><%= category.description %></td>
+        <td class = "user"><%= category.user_id %></td>
+        
         <div class = "buttons">
         <td class = "button"><%= link_to "Edit", edit_category_path(category.id) %></td>
         <td class = "button"><%= link_to "Delete", category_path(category.id), method: :delete %></td>
@@ -42,7 +47,8 @@
 
       </div>
       </tr>
-      
+     
+      <%end%>
       <%end%>
     </tbody>
   </table>

@@ -19,6 +19,11 @@
       <th><%= f.label :Description%></th>
       <th><%= f.text_field :description %></th>
     </div>
+    <div class = "form_body">
+      <th><%= f.number_field :user_id, id: :categories_user_id, class:"form-control", value: current_user.id, type: :hidden %></th>
+    </div>
+  
+
     
     <div class = "form_button">
       <%= f.submit :"Add Category" %>
