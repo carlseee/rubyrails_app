@@ -13,11 +13,11 @@ Included in the application are different API wrappers as well! I utilised Postm
 Sample Routes for testing:   
 
 namespace :api do
-    get '/creator-roles' => 'creator_roles#index'
-    get '/creator-games' => 'creator_games#index'
-    get '/store-lists' => 'store_lists#index'
-    get '/game-genres' => 'game_genres#index'
-    get '/game-publishers' => 'game_publishers#index'
+  get '/creator-roles' => 'creator_roles#index'
+  get '/creator-games' => 'creator_games#index'
+  get '/store-lists' => 'store_lists#index'
+  get '/game-genres' => 'game_genres#index'
+  get '/game-publishers' => 'game_publishers#index'
  end
 
 Testing Errors for API WRAPPER: 
