@@ -1,4 +1,4 @@
-#TITLE: JOURNAL APP
+<h1>TITLE: JOURNAL APP</h1>
 
 This is a ruby on rails application that allows users to create their own schedule for the month. It enables users to take note of their certain tasks in their own to-do list. 
 
