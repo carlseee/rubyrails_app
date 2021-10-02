@@ -14,6 +14,14 @@ Rails.application.routes.draw do
   post "login", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
   resources :users, except: [:new]
+  namespace :api do
+    get '/creator-roles' => 'creator_roles#index'
+    get '/creator-games' => 'creator_games#index'
+    get '/store-lists' => 'store_lists#index'
+    get '/game-genres' => 'game_genres#index'
+    get '/game-publishers' => 'game_publishers#index'
+  end
+
   
   resources :categories do
     resources :tasks
