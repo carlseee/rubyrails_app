@@ -19,7 +19,7 @@ Included in the application are different API wrappers as well! I utilised Postm
   get '/game-publishers' => 'game_publishers#index'
  end</h4>
 
-<h1>Testing Errors for API WRAPPER:
-![Screen Shot 2021-10-02 at 11 02 35 AM](https://user-images.githubusercontent.com/81461328/135701703-5f745f75-42fb-4469-951d-d2e6e43a6c7f.png)
-![Screen Shot 2021-10-02 at 11 04 05 AM](https://user-images.githubusercontent.com/81461328/135701725-501e9424-35ae-494a-9f7e-88db6dccc995.png)
-</h1>
+<h1>Testing Errors for API WRAPPER:</h1>
+![Screen Shot 2021-10-02 at 11 36 25 AM](https://user-images.githubusercontent.com/81461328/135702367-3a3c645e-f5de-4c4d-b284-1839079bf680.png)
+![Screen Shot 2021-10-02 at 11 36 47 AM](https://user-images.githubusercontent.com/81461328/135702378-7960d8e4-b657-442f-a1d8-e76c164742e5.png)
+
