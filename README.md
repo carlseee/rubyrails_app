@@ -3,8 +3,6 @@
 <h4>This is a ruby on rails application that allows users to create their own schedule for the month. It enables users to take note of their certain tasks in their own to-do list.</h4>
 
 <h4>In this application, users have their own credentials as well. User will just have to sign-up and log-in to be able to access the application.</h4>
-![Screen Shot 2021-10-02 at 11 34 02 AM](https://user-images.githubusercontent.com/81461328/135702325-c25c0b73-dda3-4153-9f46-1547927ab67d.png)
-
 
 Once the user is logged in, he/she is able to fully access his/her own to-do list without any conflict with other users list. ![Screen Shot 2021-10-02 at 10 25 55 AM](https://user-images.githubusercontent.com/81461328/135700966-055ea9c7-765d-4177-a7e6-00c275ef963f.png)
 
@@ -13,14 +11,14 @@ Included in the application are different API wrappers as well! I utilised Postm
 
 <h1>Sample Routes for testing:</h1>  
 
-namespace :api do
+<h4>namespace :api do
   get '/creator-roles' => 'creator_roles#index'
   get '/creator-games' => 'creator_games#index'
   get '/store-lists' => 'store_lists#index'
   get '/game-genres' => 'game_genres#index'
   get '/game-publishers' => 'game_publishers#index'
- end
+ end</h4>
 
-Testing Errors for API WRAPPER: 
+<h1>Testing Errors for API WRAPPER:</h1>
 ![Screen Shot 2021-10-02 at 11 02 35 AM](https://user-images.githubusercontent.com/81461328/135701703-5f745f75-42fb-4469-951d-d2e6e43a6c7f.png)
 ![Screen Shot 2021-10-02 at 11 04 05 AM](https://user-images.githubusercontent.com/81461328/135701725-501e9424-35ae-494a-9f7e-88db6dccc995.png)
